@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 2</title>
+</head>
+
+<body>
+    <!--2.	Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual 
+    ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações. -->
+
+    <form action="">
+        <label for="">Nome</label><br />
+        <input type="text" id="nome"><br />
+        <label for="">Senha</label><br />
+        <input type="password" id="senha"><br />
+        <button type="button" onclick="cadastrar()">verificar</button>
+    </form>
+
+    <script>
+        function cadastrar() {
+            let nome = window.document.getElementById("nome").value;
+            alert(nome);
+            let senha = window.document.getElementById("senha").value;
+            while (senha == nome) {
+                alert("Erro! A senha não pode ser igual ao nome do usuário.");
+                nome = prompt("Digite o nome!");
+                senha = prompt("Redigite a senha!");
+
+
+            }
+            alert("usuário se senha validos!");
+        }
+    </script>
+
+</body>
+
+</html>
